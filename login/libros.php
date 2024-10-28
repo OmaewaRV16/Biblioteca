@@ -11,6 +11,12 @@ include "conexion.php";
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <title>Panel Administrativo - Libros</title>
+    <style>
+        .highlight {
+            background-color: yellow;
+            font-weight: bold;
+        }
+    </style>
 </head>
 <body>
     <div class="container">
@@ -60,10 +66,15 @@ include "conexion.php";
                 // Verificar si se encontraron resultados
                 if (mysqli_num_rows($resultado) > 0) {
                     while ($fila = mysqli_fetch_assoc($resultado)) {
+                        // Resalta el texto de búsqueda en el título del libro
+                        $titulo = $fila["titulo"];
+                        if ($buscar) {
+                            $titulo = str_ireplace($buscar, "<span class='highlight'>$buscar</span>", $titulo);
+                        }
                 ?>
                     <tr>
                         <td><?php echo $fila["id_libro"]; ?></td>
-                        <td><?php echo $fila["titulo"]; ?></td>
+                        <td><?php echo $titulo; ?></td> <!-- Muestra el título con el texto resaltado -->
                         <td><?php echo $fila["nombre"]; ?></td>
                         <td><?php echo $fila["anio"]; ?></td>
                         <td><?php echo $fila["editorial"]; ?></td>
