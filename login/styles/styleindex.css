@@ -1,0 +1,406 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Fredericka+the+Great&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    line-height: 1;
+    font: 12px/18px "Lucida Grande","Lucida Sans Unicode",Helvetica,Arial,Verdana,sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    background-color: #8ebdff;
+    position: relative;
+    z-index: 1;
+}
+
+body::before {
+    content: "";
+    position: fixed; /* Fija la imagen */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('https://wallpapercave.com/wp/wp9589053.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    filter: blur(8px); 
+    z-index: -1; 
+}
+
+
+.frm {
+    width: 350px;   
+    padding: 20px;
+    text-align: center;
+    margin: 20px auto;
+    border: 1px grey solid;
+    border-radius: 10px;
+    backdrop-filter: blur(10px);
+    color: white;
+}
+
+
+.contimg {
+    width: 500px;
+    text-align: center;
+    margin: 20px auto;
+}
+
+.tecnm2 {
+    width: 200px;
+    height: 200px;
+    border-radius: 100%;
+    border: 5px solid #d40245; 
+}
+
+
+
+input {
+    width: 80%;
+    height: 30px;
+    padding: 5px;
+    color: black;
+}
+
+.usu {
+    padding: 10px;
+    border: 0%;
+}
+
+.usu p{
+    font-weight: bold;
+}
+
+.usu input[type="email"], input[type="text"], input[type="date"] {
+    background-color: transparent;
+    border: 1px black solid;
+}
+.pass {
+    padding: 10px;
+}
+
+.pass input[type="password"] {
+    color: black;
+    background-color: transparent;
+    border: 1px black solid; 
+}
+
+#prueba::placeholder {
+    color: white;
+    font-weight: bold;
+}
+.btninicio {
+    width: 78%;
+    height: 40px;
+    font-weight: bold;
+    cursor: pointer;
+    background-color: transparent;
+    border: 1px black solid;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.btninicio:hover {
+    background-color: white;
+    color: #d40246;
+    border: 2px solid #d40246;
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2);
+}
+
+
+.contenedor_botones {
+    padding: 5px;
+}
+
+.frm a{
+    font-weight: bold;
+    color: black;
+    text-decoration: none;
+}
+
+.btn {
+    width: 70%;
+    background-color: #d40246;
+    color: white;
+    border: 2px solid transparent;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.btn:hover {
+    background-color: white;
+    color: #d40246;
+    border: 2px solid #d40246;
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2);
+}
+
+.btn:active {
+    background-color: #c9003d;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    transform: translateY(10px);
+}
+
+
+hr {
+    margin: auto;
+    padding: 3px;
+    width: 90%;
+}
+
+.contenedor_boton {
+    width: 30%; 
+}
+
+.btn2 {
+    width: 30%;
+    height: 30px;
+    margin: 5px;
+    background-color: #d40246;
+    color: white;
+    cursor: pointer;
+}
+
+/*.btn2:hover {
+    width: 80%;
+    height: 30px;
+    background-color: white;
+    color: #d40246;
+    cursor: pointer;
+}*/
+
+
+.container {
+    color: black;
+    display: flex;
+    width: 100%;
+    padding: 10px;
+}
+
+.container h3 {
+    color: #cc9900;
+    padding: 10px;
+    font: bold;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.sidebar {
+    width: 240px;
+    background-color: #ffffff;
+    color: white;
+    padding: 20px;
+}
+
+.sidebar ul {
+    list-style-type: none;
+}
+
+.sidebar ul li {
+    margin: 10px 0;
+}
+
+.sidebar ul li a {
+    text-decoration: none;
+}
+
+.content {
+    background-color: #ffffff;
+    margin: 30px;
+    width: 90%;
+    text-align: center;
+}
+
+.content h1 {
+    font-size: 2.5rem;
+}
+
+.content p {
+    font-size: 1.2rem;
+}
+
+.logotec {
+    width: 50%;
+    margin: 25px;
+}
+
+table {
+    margin: 20px auto;
+    text-align: center;
+    width: 80%;
+    border-collapse: collapse;
+}
+
+
+th {
+    padding: 8px;
+    background-color: #d40246;
+    color: #ffffff;
+    border: 5px white solid;
+}
+
+td {
+    padding: 10px;
+    background-color: #fcfced;
+    border: 5px white solid;
+    border-radius: 20px;
+}
+
+
+.error-container {
+    text-align: center;
+    margin-top: 10px;
+}
+
+.avisoerror {
+    color: white;
+    background-color: #ff0000;
+    padding: 10px;
+    border: 3px solid white;
+    border-radius: 5px;
+    font-family: Arial, sans-serif;
+    font-size: 15px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    display: inline-block;
+    width: 68%;
+    height: 40px;
+}
+
+.contenedor_usuario {
+    text-align: center;
+    margin: auto;
+    padding: 30px;
+    width: 600px;
+    background-color: #fcfced;
+    border-radius: 40px;
+}
+
+.contenedor_usuario h3{
+    color: black;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.contenedor_usuario h4{
+    margin: 10px;
+    color: #ff0000;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.contenedor_usuario hr {
+    padding: 0%;
+    margin: 10px;
+}
+
+.contenedor_imagen {
+    margin: auto;
+    width: 500px;   
+    height: 500px;
+    background: url(imagenes/itmerida.jpeg);
+    background-size: contain; 
+    background-repeat: no-repeat; 
+    background-position: center; 
+}
+
+textarea {
+    width: 90%;
+    height: 30px;
+    padding: 5px;
+    font-family: Helvetica;
+}
+
+.sidebar h4 {
+    color: #800000;
+}
+
+.menu {
+    width: 180px;
+    margin: auto;
+    text-align: center;
+}
+
+.contenedor_botons {
+    width: 20%;
+    height: 30px;
+    margin: auto;
+}
+
+.btn3 {
+    width: 50%;
+    height: 30px;
+    background-color: #d40246;
+    color: white;
+    cursor: pointer;
+}
+
+select {
+    width: 80%;
+    height: 30px;
+}
+
+.frrm2 {
+    color: black;
+}
+
+.contenedor_buscar {
+    width: 80%;
+    padding: 20px;
+    margin: auto;
+    text-align: right;
+}
+
+.contenedor_buscar input[type="search"] {
+    background-color: #fcfced;
+    width: 50%;
+    border: 1px black solid;;
+}
+
+.btnn {
+    width: 150px;
+    height: 30px;
+    padding: 5px;
+    background-color: white;
+    color:#d40246;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.contenedor_buscar a {
+    text-decoration: none;
+    color: #d40246;
+}
+
+.pagination {
+    margin: 20px 0;
+    text-align: center;
+}
+
+.pagination a {
+    margin: 0 5px;
+    padding: 8px 16px;
+    border: 1px solid #d40246;
+    text-decoration: none;
+    color: #d40246;
+    background-color: white;
+}
+
+.pagination a.active {
+    background-color: #d40246;
+    color: white;
+    border: 1px solid #d40246;
+}
+
+.pagination a:hover {
+    background-color: #ed4b7e;
+    color: white;
+    border: 1px solid #d40246;
+}
+
